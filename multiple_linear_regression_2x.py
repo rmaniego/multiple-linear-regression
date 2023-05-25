@@ -44,7 +44,8 @@ def main():
     regression_model = format_regression_model(intercept, coefficients)
     print(f"\nRegression Model: {regression_model}")
     
-    r_squared = egg_count_model.score(features2, target2)
+    # Include all from the original dataset to check accuracy with unseen data
+    r_squared = egg_count_model.score(features, target)
     r_squared_percent = r_squared*100
     
     print(f"\nAbout {r_squared_percent:.2f}% of the data can be explained by the regression plane y = {regression_model}")
