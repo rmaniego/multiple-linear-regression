@@ -58,7 +58,7 @@ def predict(egg_count_model):
         try:
             layers = int(input(" Layer head count: ").strip())
             temperature = float(input(" Temperature (C): "))
-            humidity = float(input(" Humidity (C): "))
+            humidity = float(input(" Rel. Humidity (%): "))
         except:
             print("\nInvalid input, please input a valid number.")
             break
